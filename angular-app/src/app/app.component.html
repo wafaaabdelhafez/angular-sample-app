@@ -1,8 +1,14 @@
-<h1>{{message}}</h1>
-<courses 
+<!-- <h1>{{message}}</h1> -->
+<!-- <courses 
     (childEvent) = "message=$event"
     [ParentData] = "name">
-</courses>
+</courses> -->
 
-<app-employee></app-employee>
-<app-employee-details></app-employee-details>
+<!-- <app-employee></app-employee> -->
+
+<nav>
+    <a routerLink = "/departments" routerLinkActive= "active">Deparments</a>
+    <a routerLink = "/employees" routerLinkActive = "active">Employees</a>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,3 +1,4 @@
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { EmployeeService } from './employee.service';
 import { CoursesService } from './courses.service';
 import { CoursesComponent } from './courses.component';
@@ -7,9 +8,11 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
-import {FormsModule} from '@angular/forms';
-import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component'
+import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 
 @NgModule({
@@ -17,13 +20,17 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    EmployeeComponent,
-    EmployeeDetailsComponent
+    routingComponents,
+    PageNotFoundComponent,
+    DepartmentDetailsComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     CoursesService,
